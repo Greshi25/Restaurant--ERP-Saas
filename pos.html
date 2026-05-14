@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Point of Sale</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Point of Sale</h1>
+    <p>Cashier 1</p>
+  </header>
+
+  <!-- ✅ Search Section (Top) -->
+  <section class="search-section">
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search food items...">
+      <span class="search-icon">🔍</span>
+    </div>
+    <div class="categories">
+      <button class="cat-btn active" data-category="all">All</button>
+      <button class="cat-btn" data-category="main">Main Course</button>
+      <button class="cat-btn" data-category="rice">Rice</button>
+      <button class="cat-btn" data-category="beverages">Beverages</button>
+      <button class="cat-btn" data-category="sweet">Sweet</button>
+      <button class="cat-btn" data-category="bread">Bread</button>
+    </div>
+  </section>
+
+  <!-- ✅ Bill Section -->
+  <section class="bill-section">
+    <h2>Bill Number: #1031</h2>
+    <p>Status: Processing Bill #1031</p>
+    <p>Table: 1</p>
+
+    <table class="bill-table">
+      <thead>
+        <tr>
+          <th>Dish</th>
+          <th>Price (Rs)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Test Dish</td>
+          <td>250</td>
+        </tr>
+        <tr>
+          <td>Item Name</td>
+          <td>150</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Items Section -->
+  <section id="items-section">
+    <div class="item" data-category="main">Paneer Butter Masala - Rs 250</div>
+    <div class="item" data-category="main">Dal Tadka - Rs 150</div>
+    <div class="item" data-category="rice">Veg Fried Rice - Rs 180</div>
+    <div class="item" data-category="rice">Jeera Rice - Rs 120</div>
+    <div class="item" data-category="beverages">Cold Drink - Rs 50</div>
+    <div class="item" data-category="beverages">Lassi - Rs 80</div>
+    <div class="item" data-category="sweet">Gulab Jamun - Rs 100</div>
+    <div class="item" data-category="bread">Butter Naan - Rs 40</div>
+  </section>
+
+  <!-- Payment Section -->
+  <section class="payment-section">
+    <!-- Total Row -->
+    <div class="row">
+      <label>Total:</label>
+      <input type="number" id="total-amount" placeholder="Enter total">
+    </div>
+
+    <!-- Payment Row -->
+    <div class="row">
+      <label>Payment:</label>
+      <select id="payment-method">
+        <option value="cash">Cash</option>
+        <option value="card">Card</option>
+        <option value="upi">UPI</option>
+      </select>
+      <input type="number" id="pay-amount" placeholder="Enter amount">
+    </div>
+
+    <!-- Split Button Left -->
+    <div class="split-btn-row">
+      <button class="split-btn">+ Split</button>
+    </div>
+
+    <!-- Complete Payment Center -->
+    <div class="center-btn">
+      <button class="complete-btn">Complete Payment</button>
+    </div>
+  </section>
+
+  <!-- ✅ JS link -->
+  <script src="script.js"></script>
+</body>
+</html>
