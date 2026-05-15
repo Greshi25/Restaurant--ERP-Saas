@@ -12,7 +12,7 @@
     <p>Cashier 1</p>
   </header>
 
-  <!-- ✅ Search Section (Top) -->
+  <!--  Search Section -->
   <section class="search-section">
     <div class="search-box">
       <input type="text" id="search" placeholder="Search food items...">
@@ -28,7 +28,7 @@
     </div>
   </section>
 
-  <!-- ✅ Bill Section -->
+  <!--  Bill Section -->
   <section class="bill-section">
     <h2>Bill Number: #1031</h2>
     <p>Status: Processing Bill #1031</p>
@@ -42,28 +42,45 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Test Dish</td>
-          <td>250</td>
-        </tr>
-        <tr>
-          <td>Item Name</td>
-          <td>150</td>
-        </tr>
+        <!--  Products will be added dynamically by JS -->
       </tbody>
     </table>
   </section>
 
-  <!-- Items Section -->
+  <!--  Items Section -->
   <section id="items-section">
-    <div class="item" data-category="main">Paneer Butter Masala - Rs 250</div>
-    <div class="item" data-category="main">Dal Tadka - Rs 150</div>
-    <div class="item" data-category="rice">Veg Fried Rice - Rs 180</div>
-    <div class="item" data-category="rice">Jeera Rice - Rs 120</div>
-    <div class="item" data-category="beverages">Cold Drink - Rs 50</div>
-    <div class="item" data-category="beverages">Lassi - Rs 80</div>
-    <div class="item" data-category="sweet">Gulab Jamun - Rs 100</div>
-    <div class="item" data-category="bread">Butter Naan - Rs 40</div>
+    <div class="item" data-category="main">
+      Paneer Butter Masala - Rs 250
+      <button onclick="addToCart('Paneer Butter Masala', 250)">Add to Cart</button>
+    </div>
+    <div class="item" data-category="main">
+      Dal Tadka - Rs 150
+      <button onclick="addToCart('Dal Tadka', 150)">Add to Cart</button>
+    </div>
+    <div class="item" data-category="rice">
+      Veg Fried Rice - Rs 180
+      <button onclick="addToCart('Veg Fried Rice', 180)">Add to Cart</button>
+    </div>
+    <div class="item" data-category="rice">
+      Jeera Rice - Rs 120
+      <button onclick="addToCart('Jeera Rice', 120)">Add to Cart</button>
+    </div>
+    <div class="item" data-category="beverages">
+      Cold Drink - Rs 50
+      <button onclick="addToCart('Cold Drink', 50)">Add to Cart</button>
+    </div>
+    <div class="item" data-category="beverages">
+      Lassi - Rs 80
+      <button onclick="addToCart('Lassi', 80)">Add to Cart</button>
+    </div>
+    <div class="item" data-category="sweet">
+      Gulab Jamun - Rs 100
+      <button onclick="addToCart('Gulab Jamun', 100)">Add to Cart</button>
+    </div>
+    <div class="item" data-category="bread">
+      Butter Naan - Rs 40
+      <button onclick="addToCart('Butter Naan', 40)">Add to Cart</button>
+    </div>
   </section>
 
   <!-- Payment Section -->
@@ -71,7 +88,7 @@
     <!-- Total Row -->
     <div class="row">
       <label>Total:</label>
-      <input type="number" id="total-amount" placeholder="Enter total">
+      <input type="number" id="total-amount" readonly>
     </div>
 
     <!-- Payment Row -->
@@ -85,12 +102,12 @@
       <input type="number" id="pay-amount" placeholder="Enter amount">
     </div>
 
-    <!-- Split Button Left -->
+    <!-- Split Button -->
     <div class="split-btn-row">
       <button class="split-btn">+ Split</button>
     </div>
 
-    <!-- Complete Payment Center -->
+    <!-- Complete Payment -->
     <div class="center-btn">
       <button class="complete-btn">Complete Payment</button>
     </div>
